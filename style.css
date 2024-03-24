@@ -1,0 +1,264 @@
+/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+
+.page {
+  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  color: var(--text-color);
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  background-attachment: fixed;
+  min-inline-size: 375px;
+  max-inline-size: 1024px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--background-color) var(--background-image) no-repeat
+    center/cover;
+  padding: 20px 20px 0;
+}
+
+.rec {
+  position: absolute;
+  color: var(--rec-color);
+  text-transform: uppercase;
+  right: 30px;
+  top: 22px;
+  display: flex;
+  gap: 10px;
+  line-height: 1.3;
+}
+
+.rec::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  align-self: center;
+  background-color: var(--rec-color);
+  border-radius: 50%;
+  box-shadow: 0px 0px 4px 2px var(--rec-color);
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-inline-start: 1px solid var(--decor-color);
+  border-block-end: 1px solid var(--decor-color);
+  left: 20px;
+  bottom: 22px;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-inline-end: 1px solid var(--decor-color);
+  border-block-start: 1px solid var(--decor-color);
+  right: 20px;
+  top: 17px;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header__theme-menu-button {
+  padding: 3px 13px;
+  color: var(--color-text-menu);
+  text-align: center;
+  font-family: var(--font-family);
+  font-size: 18px;
+  line-height: 18px;
+  text-transform: lowercase;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--border-color);
+  color: var(--border-color);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--border-color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--border-color);
+}
+
+.title {
+  font-family: var(--font-family);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  font-weight: 700;
+  color: var(--color-title-text);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.header__title {
+  margin-left: -20px;
+}
+
+.header__container {
+  padding: 238px 0 136px;
+  display: flex;
+  flex-direction: column;
+  gap: 76px;
+  justify-content: space-between;
+}
+
+.header__text {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 23.4px;
+  color: var(--article-text-color);
+  align-self: end;
+  width: 50%;
+}
+
+.title-decor {
+  background-color: var(--background-color-text);
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__article__title {
+  font-size: 18px;
+  color: var(--decor-color);
+}
+
+.article__title {
+  font-size: 18px;
+  color: var(--article-text-color);
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 1px 1px 0 var(--accent-color);
+}
+
+.link:hover {
+  border-block-end: 1px solid var(--text-color);
+}
+
+.link:focus {
+  outline: none;
+}
+
+.link:focus-visible {
+  outline: 1px solid var(--text-color);
+}
+
+.how__articles-list-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 20px;
+  gap: 80px;
+  line-height: 1.3;
+}
+
+.content__why {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.why__articles-list {
+  display: grid;
+  grid-column: 2/4;
+  gap: 20px;
+}
+
+.what__article__title {
+  font-size: 18px;
+  width: calc(100% / 3);
+}
+
+.what__articles-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.content__how {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.how__articles-list-title {
+  margin-block-start: 20px;
+  color: var(--article-text-color);
+}
+
+.how__articles-list {
+  grid-column: 2/4;
+}
+
+.advices {
+  color: var(--article-text-color);
+  font-size: 18px;
+}
+
+.article__text {
+  font-family: var(--font-family);
+  font-size: 18px;
+}
+
+img {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content__pictures {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.illustrations {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+img:first-of-type,
+img:last-of-type {
+  grid-column: span 2;
+}
+
+img:nth-of-type(2),
+img:nth-of-type(3) {
+  grid-row: span 2;
+}
+
+.footer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 768px;
+}
