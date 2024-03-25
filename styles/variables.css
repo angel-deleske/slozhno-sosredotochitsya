@@ -3,143 +3,17 @@
   и их переопределение под различные устройства
 */
 :root {
-  --font-family: IBM Plex Mono, monospace;
+  --font-family: 'IBM Plex Mono', monospace;
+  --background-image: url(../images/cover-image-light.png);
+  --background-color: #fcedf6;
+  --text-color: #353430;
+  --decor-color: var(--text-color);
+  --color-title-text: #ffc2e6;
+  --background-color-text: #f08bca;
+  --color-text-menu: var(--text-color);
+  --background-color: #fcedf6;
+  --accent-color: #ff0070;
+  --hover-color: rgba(50, 49, 45, 0.4);
+  --border-color: var(--text-color);
 }
 
-@media (width < 1024px) and (width >= 768px) {
-  .header__theme-menu-list {
-    flex-direction: column;
-    align-items: flex-end;
-    padding-top: 70px;
-  }
-
-  .page {
-    max-inline-size: 768px;
-  }
-
-  .header {
-    min-block-size: 1024px;
-  }
-
-  .header__theme-menu-list {
-    padding: 172px 0 0;
-  }
-
-  .header__container {
-    padding: 140px 0 0;
-    gap: 138px;
-  }
-
-  .header__title {
-    font-size: clamp(7.5rem, 7.5rem + 0vw, 7.5rem);
-  }
-
-  .content__why {
-    gap: 40px;
-  }
-
-  .what__article__title {
-    width: calc(100% / 5);
-  }
-
-  .what__articles-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .how__articles-list {
-    padding-left: 6px;
-  }
-
-  .footer {
-    min-block-size: 1024px;
-  }
-}
-
-@media (width < 768px) and (width >= 375px) {
-  .page {
-    max-inline-size: 375px;
-  }
-
-  .header {
-    min-block-size: 668px;
-    padding: 10px 10px 0;
-  }
-
-  .decorated-zone::before {
-    left: 10px;
-    bottom: 13px;
-  }
-
-  .decorated-zone::after {
-    right: 10px;
-    top: 10px;
-  }
-
-  .rec {
-    top: 15px;
-    right: 20px;
-  }
-
-  .header__theme-menu-list {
-    flex-direction: column;
-    align-items: flex-end;
-    padding-top: 62px;
-  }
-
-  .header__container {
-    padding: 70px 0;
-    gap: 55px;
-  }
-
-  .title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-    line-height: 82.5%;
-  }
-
-  .header__title {
-    margin-left: 0;
-  }
-
-  .header__text {
-    width: 100%;
-  }
-
-  .content {
-    padding: 35px 10px 40px;
-    gap: 50px;
-  }
-
-  .content__why {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .what__articles-list {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .what__article__title {
-    width: 100%;
-  }
-
-  .content__how {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .content__pictures {
-    gap: 10px;
-  }
-
-  .illustrations {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .footer {
-    min-block-size: 668px;
-  }
-}
